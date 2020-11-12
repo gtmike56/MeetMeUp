@@ -100,7 +100,8 @@
         app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        android:layout_marginLeft="50dp"/>
+        android:layout_marginLeft="50dp"
+        android:onClick="toMySchedule"/>
 
     <Button
         android:id="@+id/myAccount_myGroup"
@@ -111,7 +112,8 @@
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider2"
-        android:layout_marginLeft="50dp"/>/>
+        android:layout_marginLeft="50dp"
+        android:onClick="toMyGroups"/>/>
 
     <Button
         android:id="@+id/myAccount_logOut"

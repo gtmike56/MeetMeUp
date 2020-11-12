@@ -84,7 +84,8 @@
             android:layout_height="wrap_content"
             android:background="#FF7B68EE"
             android:text="Login"
-            android:textColor="#FF000000">
+            android:textColor="#FF000000"
+            android:onClick="toMyAccount">
 
         </Button>
 
