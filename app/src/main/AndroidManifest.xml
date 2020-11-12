@@ -25,6 +25,7 @@
         <activity android:name=".ActivityFrame" />
         <activity android:name=".MySchedule" />
         <activity android:name=".MyAccount" />
+        <activity android:name=".ScheduleEdit"/>
         <activity android:name=".MyGroupsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
