@@ -32,7 +32,8 @@
         android:layout_marginEnd="162dp"
         android:text="Login"
         android:background="#FF7B68EE"
-        android:textColor="#FF000000">
+        android:textColor="#FF000000"
+        android:onClick="toLogin">
 
     </Button>
 
@@ -47,7 +48,8 @@
         android:layout_marginEnd="162dp"
         android:background="#FF7B68EE"
         android:text="Signup"
-        android:textColor="#FF000000">
+        android:textColor="#FF000000"
+        android:onClick="toSignup">
 
     </Button>
 
