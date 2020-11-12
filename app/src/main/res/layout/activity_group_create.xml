@@ -42,32 +42,61 @@
         app:layout_constraintTop_toBottomOf="@id/lblName"></TextView>
 
     <LinearLayout
+        android:layout_marginVertical="20dp"
         android:id="@+id/added"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/lblMembers"
+        app:layout_constraintBottom_toTopOf="@id/txtEmail"
         android:orientation="vertical"
         ></LinearLayout>
 
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="User Email: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/added"></TextView>
+
+
     <com.beardedhen.androidbootstrap.BootstrapEditText
-        android:id="@+id/bootstrapEditText"
+        android:id="@+id/txtEmail"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="10dp"
         app:bootstrapBrand="primary"
         app:bootstrapSize="md"
         app:roundedCorners="true"
-        app:layout_constraintBottom_toBottomOf="@+id/txtName"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/added" />
+        app:layout_constraintTop_toBottomOf="@id/added"
+        app:layout_constraintStart_toEndOf="@id/lblEmail"/>
 
     <com.beardedhen.androidbootstrap.BootstrapButton
-        app:layout_constraintTop_toBottomOf="@id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add member"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        android:onClick="addMember"
+        app:layout_constraintTop_toBottomOf="@id/added"
+        app:layout_constraintStart_toEndOf="@id/txtEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:text="Create Group"
         app:bootstrapBrand="success"
         app:bootstrapSize="lg"
@@ -76,6 +105,7 @@
         app:roundedCorners="true"
         android:onClick="create"
         />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

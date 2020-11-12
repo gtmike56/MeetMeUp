@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:text="Welcome"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="#FF000000"
+        android:background="#FFDCDCDC"
+        >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/bLoggin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="300dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="162dp"
+        android:text="Login"
+        android:background="#FF7B68EE"
+        android:textColor="#FF000000">
+
+    </Button>
+
+    <Button
+        android:id="@+id/bSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="400dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="162dp"
+        android:background="#FF7B68EE"
+        android:text="Signup"
+        android:textColor="#FF000000">
+
+    </Button>
+
+
+</RelativeLayout>

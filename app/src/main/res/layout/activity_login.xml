@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:text="Login"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="#FF000000"
+        android:background="#FFDCDCDC">
+
+    </TextView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/lbEmailLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email"
+            android:textColor="#FF000000"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <EditText
+            android:id="@+id/editEmailLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="30dp"
+            android:background="#FFDCDCDC"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/lbPasswordLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Password"
+            android:textColor="#FF000000"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <EditText
+            android:id="@+id/editTextTextPasswordLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:inputType="textPassword"
+            android:layout_marginTop="30dp"
+            android:background="#FFDCDCDC"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/bLoginLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF7B68EE"
+            android:text="Login"
+            android:textColor="#FF000000">
+
+        </Button>
+
+
+    </RelativeLayout>
+</RelativeLayout>
