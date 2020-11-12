@@ -145,7 +145,8 @@
             android:layout_height="wrap_content"
             android:background="#FF7B68EE"
             android:text="Signup"
-            android:textColor="#FF000000">
+            android:textColor="#FF000000"
+            android:onClick="toLogin">
 
         </Button>
 
