@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupCreateActivity">
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="100dp"
+        android:text="Group Name:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/txtName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:roundedCorners="true"
+        app:layout_constraintBottom_toBottomOf="@+id/lblName"
+        app:layout_constraintStart_toEndOf="@+id/lblName"
+        app:layout_constraintTop_toTopOf="@+id/lblName" />
+
+    <TextView
+        android:id="@+id/lblMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Add members:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/lblName"
+        app:layout_constraintTop_toBottomOf="@id/lblName"></TextView>
+
+    <LinearLayout
+        android:id="@+id/added"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblMembers"
+        android:orientation="vertical"
+        ></LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/bootstrapEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:roundedCorners="true"
+        app:layout_constraintBottom_toBottomOf="@+id/txtName"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/added" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Group"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        android:onClick="create"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
