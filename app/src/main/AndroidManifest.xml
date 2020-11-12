@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".GroupCreateActivity"></activity>
+        <activity android:name=".CreateNewActivity"></activity>
+        <activity android:name=".CreateFrame" />
+        <activity android:name=".ActivityFrame" />
         <activity android:name=".MySchedule" />
         <activity android:name=".MyAccount" />
         <activity android:name=".MyGroupsActivity">
