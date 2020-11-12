@@ -1,14 +1,13 @@
 package com.example.meetmeup;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 import java.util.LinkedList;
 
-public class MainActivity extends AppCompatActivity {
+public class MyGroupsActivity extends AppCompatActivity {
 
     private LinkedList<Group> notes = new LinkedList<>();
 
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mygroups);
 
         gRecyclerView = findViewById(R.id.groupsView);
         //gAdapter = new GroupListAdapter(this, notes);
