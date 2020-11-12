@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MySchedule"></activity>
+        <activity android:name=".CreateNewActivity"></activity>
+        <activity android:name=".CreateFrame" />
+        <activity android:name=".ActivityFrame" />
+        <activity android:name=".MySchedule" />
         <activity android:name=".MyAccount" />
         <activity android:name=".MyGroupsActivity">
             <intent-filter>
