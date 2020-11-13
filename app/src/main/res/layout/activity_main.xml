@@ -17,16 +17,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="toLogin"
-            android:layout_centerHorizontal="true"
             app:bootstrapBrand="primary"
             app:bootstrapText="Login"
             app:bootstrapSize="xl"
             app:roundedCorners="true">
-
         </com.beardedhen.androidbootstrap.BootstrapButton>
-
-
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -39,20 +34,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="toSignup"
-            android:layout_centerHorizontal="true"
             app:bootstrapBrand="primary"
             app:bootstrapText="Signup"
             app:bootstrapSize="xl"
             app:roundedCorners="true">
 
         </com.beardedhen.androidbootstrap.BootstrapButton>
-
-
-
     </RelativeLayout>
-
-
-
-
-
 </RelativeLayout>

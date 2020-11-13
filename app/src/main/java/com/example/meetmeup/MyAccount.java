@@ -31,4 +31,8 @@ public class MyAccount extends AppCompatActivity {
         Intent intent = new Intent(MyAccount.this, MyGroupsActivity.class);
         startActivity(intent);
     }
+
+    public void logout(View view) {
+        finish();
+    }
 }
