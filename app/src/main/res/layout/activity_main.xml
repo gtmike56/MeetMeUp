@@ -6,52 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:text="Welcome"
-        android:padding="10dp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="30dp"
-        android:textColor="#FF000000"
-        android:background="#FFDCDCDC"
-        >
 
-    </TextView>
-
-    <Button
-        android:id="@+id/bLoggin"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginVertical="300dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginEnd="162dp"
-        android:text="Login"
-        android:background="#FF7B68EE"
-        android:textColor="#FF000000"
-        android:onClick="toLogin">
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true">
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/bLoggin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toLogin"
+            android:layout_centerHorizontal="true"
+            app:bootstrapBrand="primary"
+            app:bootstrapText="Login"
+            app:bootstrapSize="xl"
+            app:roundedCorners="true">
 
-    </Button>
+        </com.beardedhen.androidbootstrap.BootstrapButton>
 
-    <Button
-        android:id="@+id/bSignup"
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginVertical="400dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginEnd="162dp"
-        android:background="#FF7B68EE"
-        android:text="Signup"
-        android:textColor="#FF000000"
-        android:onClick="toSignup">
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true">
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/bSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toSignup"
+            android:layout_centerHorizontal="true"
+            app:bootstrapBrand="primary"
+            app:bootstrapText="Signup"
+            app:bootstrapSize="xl"
+            app:roundedCorners="true">
 
-    </Button>
+        </com.beardedhen.androidbootstrap.BootstrapButton>
+
+
+
+    </RelativeLayout>
+
+
+
 
 
 </RelativeLayout>
