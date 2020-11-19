@@ -4,172 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateNewActivity">
-
-    <EditText
-        android:id="@+id/editTextText_place"
-        android:layout_width="211dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#AA75E5"
-        android:ems="10"
-        android:hint="Enter place"
-        android:inputType="textPersonName"
-        android:textColor="#000"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toEndOf="@+id/textView_place"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText_category" />
-
-    <EditText
-        android:id="@+id/editTextText_category"
-        android:layout_width="211dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#AA75E5"
-        android:ems="10"
-        android:hint="Enter category"
-        android:inputType="textPersonName"
-        android:textColor="#000"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toEndOf="@+id/textView_category"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText_time" />
-
-    <EditText
-        android:id="@+id/editTextText_time"
-        android:layout_width="211dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#AA75E5"
-        android:ems="10"
-        android:hint="Enter time"
-        android:inputType="textPersonName"
-        android:textColor="#000"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_time"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText_date" />
-
-    <EditText
-        android:id="@+id/editTextText_date"
-        android:layout_width="211dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#AA75E5"
-        android:ems="10"
-        android:hint="Enter date"
-        android:inputType="textPersonName"
-        android:textColor="#000"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toEndOf="@+id/textView_date"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText_title" />
+    android:backgroundTint="#673AB7"
+    tools:context=".CreateFrame">
 
     <TextView
-        android:id="@+id/textView_place"
+        android:id="@+id/textView_userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:text="Place:"
-        android:textColor="#000"
-        android:textSize="26dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Enter user's email:"
+        android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_category" />
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonAddMember" />
 
     <TextView
-        android:id="@+id/textView_category"
+        android:id="@+id/textView_groupMembers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="50dp"
-        android:text="Category:"
-        android:textColor="#000"
-        android:textSize="26dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="188dp"
+        android:text="Add Members:"
+        android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_time" />
+        app:layout_constraintTop_toBottomOf="@+id/textCreate" />
 
     <TextView
-        android:id="@+id/textView_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="50dp"
-        android:text="Time:"
-        android:textColor="#000"
-        android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_date" />
-
-    <TextView
-        android:id="@+id/textView_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="50dp"
-        android:text="Date:"
-        android:textColor="#000"
-        android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
-
-    <TextView
-        android:id="@+id/textView_pageTitle"
+        android:id="@+id/textCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
-        android:text="Create New Activity"
-        android:textColor="#000"
+        android:text="Create New Group"
+        android:textColor="#000000"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <TextView
+        android:id="@+id/textView_groupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:text="Group Name:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCreate" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/editTextText_groupName"
+        android:layout_width="165dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="92dp"
+        android:hint="Enter group name"
+        android:inputType="textPersonName"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:bootstrapBrand="primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toEndOf="@+id/textView_groupName"
+        app:layout_constraintTop_toBottomOf="@+id/textCreate"
+        app:roundedCorners="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_membersList"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_groupMembers" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/floatingActionButtonAddMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Add Member"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="md"
+        app:buttonMode="regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_membersList"
+        app:roundedCorners="true"
+        app:showOutline="false"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="245dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:hint="Enter user's email"
+        android:inputType="textPersonName"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:bootstrapBrand="primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_userEmail" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
         android:id="@+id/button_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="#AA75E5"
+        android:layout_marginTop="17dp"
         android:text="Create"
         android:textColor="#FFF"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="xl"
+        app:buttonMode="regular"
+        app:roundedCorners="true"
+        app:showOutline="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText_place"
-        app:layout_constraintVertical_bias="0.539" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintVertical_bias="0.407" />
 
-    <TextView
-        android:id="@+id/textView_title"
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/button_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="60dp"
-        android:text="ActivityTitle:"
-        android:textColor="#000"
-        android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_pageTitle" />
-
-    <EditText
-        android:id="@+id/editTextText_title"
-        android:layout_width="211dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#AA75E5"
-        android:ems="10"
-        android:hint="Enter title"
-        android:inputType="textPersonName"
-        android:textColor="#000"
-        android:textSize="20dp"
+        android:layout_marginBottom="116dp"
+        android:text="Add"
+        android:textColor="#FFF"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="xl"
+        app:buttonMode="regular"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toEndOf="@+id/textView_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_pageTitle" />
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        app:roundedCorners="true"
+        app:showOutline="false" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
