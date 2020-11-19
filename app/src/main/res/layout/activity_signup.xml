@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:text="Create new account"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="#FF000000"
+        android:background="#FFDCDCDC"
+        >
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/lbEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email"
+            android:textColor="#FF000000"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <EditText
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="30dp"
+            android:background="#FFDCDCDC"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/lbUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Username"
+            android:textColor="#FF000000"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <EditText
+            android:id="@+id/editTextTextUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+
+            android:layout_marginTop="30dp"
+            android:background="#FFDCDCDC"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/lbPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Password"
+            android:textColor="#FF000000"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <EditText
+            android:id="@+id/editTextTextEmailPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:inputType="textPassword"
+            android:layout_marginTop="30dp"
+            android:background="#FFDCDCDC"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/lbConfirmPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Confirm password"
+            android:textColor="#FF000000"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <EditText
+            android:id="@+id/editTextTextConfirmPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+
+            android:layout_marginTop="30dp"
+            android:background="#FFDCDCDC"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/bSignupNewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF7B68EE"
+            android:text="Signup"
+            android:textColor="#FF000000"
+            android:onClick="toLogin">
+
+        </Button>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

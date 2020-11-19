@@ -6,222 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".MySchedule">
 
-    <EditText
-        android:id="@+id/editStartTimeFriday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-
-        android:layout_marginStart="148dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editStartTimeThursday"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editEndTimeFriday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toEndOf="@+id/editStartTimeFriday"
-        app:layout_constraintTop_toBottomOf="@+id/editEndTimeThursday"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editStartTimeThursday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-
-        android:layout_marginStart="148dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editStartTimeWednesday"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editEndTimeThursday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toEndOf="@+id/editStartTimeThursday"
-        app:layout_constraintTop_toBottomOf="@+id/editEndTimeWednesday"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editStartTimeWednesday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="150dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editStartTimeTuesday"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editEndTimeWednesday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toEndOf="@+id/editStartTimeWednesday"
-        app:layout_constraintTop_toBottomOf="@+id/editEndTimeTuesday"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editStartTimeTuesday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="150dp"
-
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editStartTimeMonday"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/editEndTimeTuesday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toEndOf="@+id/editStartTimeTuesday"
-        app:layout_constraintTop_toBottomOf="@+id/editEndTimeMonday"
-        android:layout_marginTop="20dp"/>
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#AA75E5"
-        android:text="Save"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="30dp"/>
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="none"
-        android:text="+ Add new category"
-        android:textColor="#AA75E5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider5"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"/>
-
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="280dp"/>
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Work:"
+        android:text="Weekly Schedule"
+        android:textColor="#000000"
         android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="20dp"/>
 
-    <TextView
-        android:id="@+id/textView3"
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/mySchedule_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
-        android:text="Monday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="20dp"/>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Tuesday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:layout_marginTop="40dp"/>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Wednesday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:layout_marginTop="40dp"/>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Thursday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        android:layout_marginTop="40dp"/>
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Friday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:layout_marginLeft="20dp"/>
-
-    <EditText
-        android:id="@+id/editStartTimeMonday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="150dp"
-        android:ems="10"
-
-        android:inputType="time"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"/>
-
-    <EditText
-        android:id="@+id/editEndTimeMonday"
-        android:layout_width="86dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="time"
+        android:text="Edit"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:buttonMode="regular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editStartTimeMonday"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="25dp"
+        app:roundedCorners="true"
+        app:showOutline="true"
+        android:onClick="toShceduleEdit"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

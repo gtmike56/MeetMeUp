@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleEdit">
+
+    <EditText
+        android:id="@+id/editStartTimeFriday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="148dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStartTimeThursday"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editEndTimeFriday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toEndOf="@+id/editStartTimeFriday"
+        app:layout_constraintTop_toBottomOf="@+id/editEndTimeThursday"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editStartTimeThursday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="148dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStartTimeWednesday"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editEndTimeThursday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toEndOf="@+id/editStartTimeThursday"
+        app:layout_constraintTop_toBottomOf="@+id/editEndTimeWednesday"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editStartTimeWednesday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="150dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStartTimeTuesday"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editEndTimeWednesday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toEndOf="@+id/editStartTimeWednesday"
+        app:layout_constraintTop_toBottomOf="@+id/editEndTimeTuesday"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editStartTimeTuesday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="150dp"
+
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStartTimeMonday"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editEndTimeTuesday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/editStartTimeTuesday"
+        app:layout_constraintTop_toBottomOf="@+id/editEndTimeMonday"
+        android:layout_marginTop="20dp"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/scheduleEdit_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="xl"
+        app:buttonMode="regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        app:roundedCorners="true"
+        app:showOutline="false"
+        />
+
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/scheduleEdit_AddCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Add new category"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider5"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        app:roundedCorners="true"
+        app:showOutline="false"
+        />
+
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="255dp"/>
+
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bootstrapBrand="primary"
+        app:bootstrapText="Work:"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+       />
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/scheduleEdit_MondayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bootstrapBrand="danger"
+        android:layout_marginTop="110dp"
+        android:text="Monday"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        />
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/scheduleEdit_TuesdayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bootstrapBrand="danger"
+        android:text="Tuesday"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleEdit_MondayLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        />
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/scheduleEdit_WednesdayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bootstrapBrand="danger"
+        android:text="Wednesday"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleEdit_TuesdayLabel"
+        android:layout_marginTop="40dp"
+        />
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/scheduleEdit_ThursdayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bootstrapBrand="danger"
+        android:text="Thursday"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleEdit_WednesdayLabel"
+        android:layout_marginTop="40dp"
+        />
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/scheduleEdit_FridayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bootstrapBrand="danger"
+        android:text="Friday"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleEdit_ThursdayLabel"
+        android:layout_marginTop="40dp"
+        />
+
+    <EditText
+        android:id="@+id/editStartTimeMonday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="150dp"
+        android:ems="10"
+
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <EditText
+        android:id="@+id/editEndTimeMonday"
+        android:layout_width="86dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editStartTimeMonday"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
