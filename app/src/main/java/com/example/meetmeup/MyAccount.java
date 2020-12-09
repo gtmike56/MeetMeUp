@@ -8,9 +8,16 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MyAccount extends AppCompatActivity {
+
+    TextView username;
+    FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +27,12 @@ public class MyAccount extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         ColorDrawable  colorDrawable = new ColorDrawable(Color.parseColor("#343a40"));
         actionBar.setBackgroundDrawable(colorDrawable);
+
+        fAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = fAuth.getCurrentUser();
+        username = findViewById(R.id.myAccount_username);
+        username.setText(user.getEmail());
+
     }
 
     public void toMySchedule(View view) {
@@ -33,6 +46,8 @@ public class MyAccount extends AppCompatActivity {
     }
 
     public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         finish();
     }
 }

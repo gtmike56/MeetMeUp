@@ -1,94 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
     <TextView
+        android:id="@+id/Login_errorMessage"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:text="Login"
-        android:padding="10dp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="50dp"
+        android:text="We do not have a user with this email and password. Please try again"
+        android:textColor="@color/bootstrap_brand_danger"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Login_textView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300dp"
+        android:text="Email"
+        android:textColor="#000"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/Login_editText_Email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="60dp"
         android:layout_marginTop="10dp"
-        android:textSize="30dp"
-        android:textColor="#FF000000"
-        android:background="#FFDCDCDC">
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login_textView_email"
+        app:roundedCorners="true" />
 
-    </TextView>
-    <RelativeLayout
+    <TextView
+        android:id="@+id/Login_textView_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:id="@+id/lbEmailLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Email"
-            android:textColor="#FF000000"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true">
+        android:layout_marginTop="30dp"
+        android:text="Password"
+        android:textColor="#000"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login_editText_Email" />
 
-        </TextView>
-        <EditText
-            android:id="@+id/editEmailLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="13"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="30dp"
-            android:background="#FFDCDCDC"
-            android:layout_centerHorizontal="true"
-            />
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/Login_editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login_textView_password"
+        app:roundedCorners="true" />
 
-
-    </RelativeLayout>
-    <RelativeLayout
+    <ProgressBar
+        android:id="@+id/Login_ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:id="@+id/lbPasswordLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Password"
-            android:textColor="#FF000000"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true">
-
-        </TextView>
-        <EditText
-            android:id="@+id/editTextTextPasswordLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="13"
-            android:inputType="textPassword"
-            android:layout_marginTop="30dp"
-            android:background="#FFDCDCDC"
-            android:layout_centerHorizontal="true"
-            />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Login_editText_password"
+        app:layout_constraintBottom_toTopOf="@+id/Login_btn_Login"
+        android:visibility="invisible"
+        />
 
 
-    </RelativeLayout>
-    <RelativeLayout
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/Login_btn_Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_centerHorizontal="true">
-        <Button
-            android:id="@+id/bLoginLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#FF7B68EE"
-            android:text="Login"
-            android:textColor="#FF000000"
-            android:onClick="toMyAccount">
+        android:text="Log In"
+        android:textColor="#FFF"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="xl"
+        app:buttonMode="regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login_editText_password"
+        app:layout_constraintVertical_bias="0.539"
+        app:roundedCorners="true"
+        app:showOutline="false"
+        android:onClick="toMyAccount"
+        />
 
-        </Button>
-
-
-    </RelativeLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

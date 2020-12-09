@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "474096270333",
+    "project_id": "meetmeup-android",
+    "storage_bucket": "meetmeup-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474096270333:android:fc16d54ec5910b161df794",
+        "android_client_info": {
+          "package_name": "com.example.meetmeup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474096270333-9tdcqjkk5ijno23gvk5lvm01ovmu53se.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJmvqWj6QtRORdTxhrujlyxaUXhtKRm8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474096270333-9tdcqjkk5ijno23gvk5lvm01ovmu53se.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
