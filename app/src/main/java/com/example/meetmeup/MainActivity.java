@@ -20,7 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-    Button bLoggin, bSignup, bSignupNewAccount, bLoginLogin;
+//    Button bLoggin, bSignup, bSignupNewAccount, bLoginLogin;
 //    FirebaseDatabase db; //For Connection to DataBase
 //    FirebaseAuth auth; // For Authorization
 //    DatabaseReference users; // For work with tables in DB
@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setBackgroundDrawable(colorDrawable);
 
         //initialisation
-        bLoggin = findViewById(R.id.bLoggin);
-        bSignup = findViewById(R.id.bSignup);
-        bSignupNewAccount = findViewById(R.id.bSignupNewAccount);
-        bLoginLogin = findViewById(R.id.bLoginLogin);
+//        bLoggin = findViewById(R.id.bLoggin);
+//        bSignup = findViewById(R.id.bSignup);
+//        bSignupNewAccount = findViewById(R.id.bSignupNewAccount);
+//        bLoginLogin = findViewById(R.id.bLoginLogin);
 
 //        auth = FirebaseAuth.getInstance();
 //        db = FirebaseDatabase.getInstance();

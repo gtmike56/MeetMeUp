@@ -68,19 +68,13 @@
 
         <activity
             android:name=".MyAccount"
-            android:label="My Account"
-            android:parentActivityName=".LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity" />
-        </activity>
+            android:label="My Account"/>
 
 
         <activity
             android:name=".ScheduleEdit"
             android:label="Edit Schedule"
-            android:parentActivityName=".MySchedule"
-            >
+            android:parentActivityName=".MySchedule">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MySchedule"/>
