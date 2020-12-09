@@ -1,159 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
 
     <TextView
+        android:id="@+id/TextView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Email"
+        android:textColor="#000"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/editText_Email"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:text="Create new account"
-        android:padding="10dp"
-        android:gravity="center"
+        android:layout_marginHorizontal="60dp"
+        android:layout_height="48dp"
         android:layout_marginTop="10dp"
-        android:textSize="30dp"
-        android:textColor="#FF000000"
-        android:background="#FFDCDCDC"
-        >
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:roundedCorners="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView_email" />
 
-    </TextView>
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/textView_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:id="@+id/lbEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Email"
-            android:textColor="#FF000000"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true">
+        android:layout_marginTop="30dp"
+        android:text="Password"
+        android:textColor="#000"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Email" />
 
-        </TextView>
-        <EditText
-            android:id="@+id/editTextTextEmailAddress2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="13"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="30dp"
-            android:background="#FFDCDCDC"
-            android:layout_centerHorizontal="true"
-            />
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/editText_password"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:roundedCorners="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_password" />
 
 
-    </RelativeLayout>
-    <RelativeLayout
+    <TextView
+        android:id="@+id/textView_confirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:id="@+id/lbUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Username"
-            android:textColor="#FF000000"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true">
+        android:layout_marginTop="30dp"
+        android:text="Confirm Password"
+        android:textColor="#000"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password" />
 
-        </TextView>
-        <EditText
-            android:id="@+id/editTextTextUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="13"
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/editText_confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:hint="Confiem Password"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="md"
+        app:roundedCorners="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_confirmPassword" />
 
-            android:layout_marginTop="30dp"
-            android:background="#FFDCDCDC"
-            android:layout_centerHorizontal="true"
-            />
-
-
-    </RelativeLayout>
-    <RelativeLayout
+    <ProgressBar
+        android:id="@+id/signUp_ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:id="@+id/lbPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Password"
-            android:textColor="#FF000000"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true">
-
-        </TextView>
-        <EditText
-            android:id="@+id/editTextTextEmailPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="13"
-            android:inputType="textPassword"
-            android:layout_marginTop="30dp"
-            android:background="#FFDCDCDC"
-            android:layout_centerHorizontal="true"
-            />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button_create"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_confirmPassword"
+        />
 
 
-    </RelativeLayout>
-    <RelativeLayout
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/button_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:layout_centerHorizontal="true">
-        <TextView
-            android:id="@+id/lbConfirmPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Confirm password"
-            android:textColor="#FF000000"
-            android:textSize="20dp"
-            android:layout_centerHorizontal="true">
+        android:text="Sign Up"
+        android:textColor="#FFF"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="xl"
+        app:buttonMode="regular"
+        app:roundedCorners="true"
+        app:showOutline="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_confirmPassword"
+        app:layout_constraintVertical_bias="0.539"
+        android:onClick="signUpUser"/>
 
-        </TextView>
-        <EditText
-            android:id="@+id/editTextTextConfirmPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="13"
-
-            android:layout_marginTop="30dp"
-            android:background="#FFDCDCDC"
-            android:layout_centerHorizontal="true"
-            />
-
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_centerHorizontal="true">
-        <Button
-            android:id="@+id/bSignupNewAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#FF7B68EE"
-            android:text="Signup"
-            android:textColor="#FF000000"
-            android:onClick="toLogin">
-
-        </Button>
-
-
-    </RelativeLayout>
-
-
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
