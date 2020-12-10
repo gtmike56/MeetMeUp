@@ -1,5 +1,6 @@
 package com.example.meetmeup;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,16 +10,26 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class MyGroupsActivity extends AppCompatActivity {
 
-    private LinkedList<Group> groups = GroupsDummyContent.getGroups();
-
+    private LinkedList<Group> groups = new LinkedList<Group>();
     private RecyclerView gRecyclerView;
     private GroupListAdapter gAdapter;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    CollectionReference groupRef = db.collection("Groups");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +41,33 @@ public class MyGroupsActivity extends AppCompatActivity {
 
 
         gRecyclerView = findViewById(R.id.groupsView);
-        gAdapter = new GroupListAdapter(this, groups);
-        gRecyclerView.setAdapter(gAdapter);
+
         gRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+        groupRef.get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            for (QueryDocumentSnapshot documentSnapshot: task.getResult()){
+                                Group newGroup = new Group();
+                                String title = documentSnapshot.getString("title");
+                                newGroup.setName(title);
+                                ArrayList<String> members = (ArrayList<String>) documentSnapshot.getData().get("members");
+                                newGroup.setEmails(members);
+                                newGroup.setDocumentId(documentSnapshot.getId());
+
+                                groups.add(newGroup);
+                            }
+                            gAdapter = new GroupListAdapter(MyGroupsActivity.this, groups);
+                            gRecyclerView.setAdapter(gAdapter);
+                        }else{
+                            Log.d("error", "Error getting documents: ", task.getException());
+                        }
+
+                    }
+                });
     }
 
     public void createNewGroup(View view) {
