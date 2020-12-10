@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
-    //private int ID;
     private String name;
     private ArrayList<String> emails;
     private String documentId;
