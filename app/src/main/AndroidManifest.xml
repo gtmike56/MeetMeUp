@@ -3,6 +3,8 @@
     package="com.example.meetmeup">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".MeetMeUpApplication"
@@ -13,10 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ChangePhoto"
+            android:label="Change Photo"
+            android:parentActivityName=".MyAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyAccount" />
+        </activity>
+        <activity
             android:name=".GroupDetailsActivity"
             android:label="Group Details"
-            android:parentActivityName=".MyGroupsActivity"
-            >
+            android:parentActivityName=".MyGroupsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MyGroupsActivity" />
@@ -60,7 +69,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".GroupDetailsActivity" />
         </activity>
-        <activity android:name=".ActivityFrame" />
+        <activity
+            android:name=".ActivityFrame"
+            android:label="Activity Details"
+            android:parentActivityName=".GroupDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GroupDetailsActivity" />
+        </activity>
         <activity
             android:name=".MySchedule"
             android:label="My Schedule"
