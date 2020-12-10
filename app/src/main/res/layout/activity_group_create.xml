@@ -42,13 +42,15 @@
         app:layout_constraintTop_toBottomOf="@id/lblName"></TextView>
 
     <LinearLayout
-        android:layout_marginVertical="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/added"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/lblMembers"
-        app:layout_constraintBottom_toTopOf="@id/txtEmail"
         android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="30dp"
         ></LinearLayout>
 
     <TextView
@@ -61,7 +63,8 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/added"></TextView>
+        app:layout_constraintTop_toBottomOf="@id/added"
+        android:layout_marginTop="20dp"></TextView>
 
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
@@ -69,11 +72,13 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:inputType="textEmailAddress"
         app:bootstrapBrand="primary"
         app:bootstrapSize="md"
         app:roundedCorners="true"
         app:layout_constraintTop_toBottomOf="@id/added"
-        app:layout_constraintStart_toEndOf="@id/lblEmail"/>
+        app:layout_constraintStart_toEndOf="@id/lblEmail"
+        android:layout_marginTop="20dp"/>
 
     <com.beardedhen.androidbootstrap.BootstrapButton
         android:layout_width="wrap_content"
@@ -88,6 +93,7 @@
         app:layout_constraintTop_toBottomOf="@id/added"
         app:layout_constraintStart_toEndOf="@id/txtEmail"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
         />
 
     <com.beardedhen.androidbootstrap.BootstrapButton

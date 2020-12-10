@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.meetmeup">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".MeetMeUpApplication"
         android:allowBackup="true"
@@ -10,8 +14,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
+        <activity
+            android:name=".ChangePhoto"
+            android:label="Change Photo"
+            android:parentActivityName=".MyAccount">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyAccount" />
+        </activity>
+        <activity
+            android:name=".GroupDetailsActivity"
+            android:label="Group Details"
+            android:parentActivityName=".MyGroupsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyGroupsActivity" />
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:label="Login"
@@ -20,8 +38,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
         <activity
             android:name=".SignupActivity"
             android:label="Sign Up"
@@ -30,8 +46,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,59 +53,57 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".GroupCreateActivity"
             android:label="Create New Group"
             android:parentActivityName=".MyGroupsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MyGroupsActivity"/>
+                android:value=".MyGroupsActivity" />
         </activity>
-
-
-        <activity android:name=".CreateNewActivity" />
-        <activity android:name=".CreateFrame" />
-        <activity android:name=".ActivityFrame" />
-
-
+        <activity
+            android:name=".CreateFrame"
+            android:label="Create Activity"
+            android:parentActivityName=".GroupDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GroupDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".ActivityFrame"
+            android:label="Activity Details"
+            android:parentActivityName=".GroupDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GroupDetailsActivity" />
+        </activity>
         <activity
             android:name=".MySchedule"
             android:label="My Schedule"
             android:parentActivityName=".MyAccount">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MyAccount"/>
+                android:value=".MyAccount" />
         </activity>
-
-
         <activity
             android:name=".MyAccount"
-            android:label="My Account"/>
-
-
+            android:label="My Account" />
         <activity
             android:name=".ScheduleEdit"
             android:label="Edit Schedule"
             android:parentActivityName=".MySchedule">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MySchedule"/>
+                android:value=".MySchedule" />
         </activity>
-
-
         <activity
             android:name=".MyGroupsActivity"
             android:label="My Groups"
-            android:parentActivityName=".MyAccount"
-            >
+            android:parentActivityName=".MyAccount">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MyAccount"/>
+                android:value=".MyAccount" />
         </activity>
-
-
     </application>
 
 </manifest>

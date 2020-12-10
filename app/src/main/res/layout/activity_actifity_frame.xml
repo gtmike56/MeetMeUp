@@ -11,31 +11,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="40dp"
         android:text="Category"
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_activityTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_activityDate" />
 
     <TextView
         android:id="@+id/textView_activityTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="119dp"
+        android:layout_marginTop="60dp"
         android:text="Time"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toEndOf="@+id/textView_activityDate" />
+        app:layout_constraintStart_toEndOf="@+id/textView_activityDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView_activityTitle" />
 
     <TextView
         android:id="@+id/textView_activityTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:text="Activity Title"
         android:textColor="#000000"
         android:textSize="36dp"
@@ -48,13 +48,13 @@
         android:id="@+id/textView_activityDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="60dp"
         android:text="Date"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_activityTitle" />
 
     <com.beardedhen.androidbootstrap.BootstrapWell
         android:id="@+id/editTextTextMultiLine"

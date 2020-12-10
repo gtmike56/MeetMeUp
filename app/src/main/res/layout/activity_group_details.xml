@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupDetailsActivity">
+
+    <ImageView
+        android:id="@+id/group_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sales"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+>
+    </ImageView>
+
+    <TextView
+        android:id="@+id/groupDetails_txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_height="wrap_content"
+        android:text="{Title of the Group}"
+        android:textColor="#000"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/group_image"
+        app:layout_constraintStart_toEndOf="@+id/group_image"
+        app:layout_constraintTop_toTopOf="@+id/group_image" />
+
+
+    <TextView
+        android:id="@+id/groupDetails_txtEmails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Members:"
+        android:textColor="#000"
+        android:textSize="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_image" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/groupDetails_txtEmails"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="50dp"
+        ></LinearLayout>
+
+    <TextView
+        android:id="@+id/groupDetails_txtActivities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activities:"
+        android:textColor="#000"
+        android:textSize="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/members" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activitiesView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/groupDetails_goToActivity"
+        app:layout_constraintTop_toBottomOf="@id/groupDetails_txtActivities"
+        android:layout_marginBottom="30dp"/>
+
+
+
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/groupDetails_goToActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crete Activity"
+        android:textColor="#FFF"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="xl"
+        app:buttonMode="regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintVertical_bias="0.539"
+        app:roundedCorners="true"
+        app:showOutline="false"
+        android:onClick="toActivity"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
