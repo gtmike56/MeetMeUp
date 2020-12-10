@@ -41,10 +41,6 @@ public class SignupActivity extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.signUp_ProgressBar);
 
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-            finish();
-        }
 
         progressBar.getIndeterminateDrawable().setColorFilter(0xFF343A40, PorterDuff.Mode.MULTIPLY);
     }

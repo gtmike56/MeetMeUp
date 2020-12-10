@@ -37,9 +37,9 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.Grou
             Log.d("kek", "Item clicked");
             int mPosition = getLayoutPosition();
             Group mGroup = mGroupList.get(mPosition);
-//            Intent intent = new Intent(context, EditNoteActivity.class);
-//            intent.putExtra("group_position", mPosition);
-//            ((Activity) context).startActivityForResult(intent, 1);
+            Intent intent = new Intent(context, GroupDetailsActivity.class);
+            intent.putExtra("group_id", mGroup.getDocumentId());
+            ((Activity) context).startActivity(intent);
         }
     }
 

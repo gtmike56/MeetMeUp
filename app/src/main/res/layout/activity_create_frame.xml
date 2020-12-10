@@ -12,7 +12,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="35dp"
         android:hint="Enter place"
-        android:inputType="textPersonName"
+        android:inputType="textPostalAddress"
         android:textColor="#000"
         android:textSize="20dp"
         app:bootstrapBrand="primary"
@@ -29,7 +29,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
         android:hint="Enter category"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:textColor="#000"
         android:textSize="20dp"
         app:bootstrapBrand="primary"
@@ -46,7 +46,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
         android:hint="Enter time"
-        android:inputType="textPersonName"
+        android:inputType="time"
         android:textColor="#000"
         android:textSize="20dp"
         app:bootstrapBrand="primary"
@@ -54,7 +54,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_time"
         app:layout_constraintTop_toBottomOf="@+id/editTextText_date"
-        app:roundedCorners="true" />
+        app:roundedCorners="true"
+        android:onClick="pickTheTime"
+        />
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/editTextText_date"
@@ -62,7 +64,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
         android:hint="Enter date"
-        android:inputType="textPersonName"
+        android:ems="10"
+        android:inputType="date"
         android:textColor="#000"
         android:textSize="20dp"
         app:bootstrapBrand="primary"
@@ -71,7 +74,10 @@
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toEndOf="@+id/textView_date"
         app:layout_constraintTop_toBottomOf="@+id/editTextText_title"
-        app:roundedCorners="true" />
+        app:roundedCorners="true"
+        android:onClick="pickTheDate"
+        />
+
 
     <TextView
         android:id="@+id/textView_place"
@@ -121,24 +127,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_title" />
 
-    <TextView
-        android:id="@+id/textView_pageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Create New Activity"
-        android:textColor="#000"
-        android:textSize="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.beardedhen.androidbootstrap.BootstrapButton
         android:id="@+id/button_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:text="Create"
         android:textColor="#FFF"
         app:bootstrapBrand="primary"
@@ -151,7 +144,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText_place"
-        app:layout_constraintVertical_bias="0.539" />
+        app:layout_constraintVertical_bias="0.539"
+        android:onClick="createNewActivity"/>
 
     <TextView
         android:id="@+id/textView_title"
@@ -163,7 +157,7 @@
         android:textColor="#000"
         android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_pageTitle" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/editTextText_title"
@@ -171,7 +165,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
         android:hint="Enter title"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:textColor="#000"
         android:textSize="20dp"
         app:bootstrapBrand="primary"
@@ -180,5 +174,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toEndOf="@+id/textView_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_pageTitle" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
